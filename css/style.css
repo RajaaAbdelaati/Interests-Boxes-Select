@@ -1,0 +1,168 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-purple-color: #5c48f1;
+  --elements-background-color: #eeecfd;
+  --element-border-color: #e0e0e1;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Small */
+@media(min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media(min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media(min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+.interests {
+  margin: 20px auto;
+}
+.interests .container {
+  padding: 6px 10px;
+  background-color: #fafafa;
+}
+.interests .container .title {
+  background-color: #eeecfd;
+  padding: 25px 20px;
+  text-align: center;
+}
+.interests .container .title h2 {
+  color: var(--main-purple-color);
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+form .parent-box {
+  flex-basis: 24%;
+  position: relative;
+}
+@media (max-width: 991px) {
+  form .parent-box {
+    flex-basis: 48%;
+  }
+}
+@media (max-width: 767px) {
+  form .parent-box {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+form .parent-box input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+}
+form .parent-box input[type="checkbox"]::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ababae;
+  background-color: #FFF;
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  z-index: 5;
+}
+form .parent-box input[type="checkbox"]:checked::before {
+  border-color: var(--main-purple-color);
+}
+form .parent-box input[type="checkbox"]:checked:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: var(--main-purple-color);
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  z-index: 5;
+}
+form .parent-box:hover > input[type="checkbox"]:not(:checked)::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: var(--main-purple-color);
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  opacity: .5;
+  z-index: 5;
+}
+form .parent-box input[type="checkbox"]:checked ~ .box {
+  background-color: var(--elements-background-color);
+  border-color: var(--main-purple-color);
+}
+form .parent-box .box {
+  padding: 20px 20px;
+  background-color: #FFF;
+  border: 3px solid var(--element-border-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: relative;
+}
+form .parent-box .box .content {
+  text-align: center;
+}
+form .parent-box .box .content i {
+  font-size: 60px;
+  color: var(--main-purple-color);
+  margin: 30px 0 20px 0;
+}
+form .box .content h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
